@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var tabFilms = [{titre : 'Dracula', genre : 'Horreur', id : 1}, 
+                {titre : 'Dtrez', genre : 'Anime', id : 3},
+                {titre : 'Mimi', genre : 'Drame', id : 2}];
+            function trieParID(f1,f2){
+                if( f1.id > f2.id )
+                    return 1;
+                else if( f1.id < f2.id )
+                    return -1;
+                else
+                    return 0;
+            }    
+            tabFilms.sort(trieParID);
+        </script>
+    </body>
+</html>

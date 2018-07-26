@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .bloc {
+/*                display: flex;
+                width: 20%;
+                margin: 0 auto;
+                display: block;*/
+                display: block;
+                width: 783px;
+            }
+            .bloc button{
+                min-width: 120px;
+                min-height: 120px;
+                background-color: #c593de;
+                border-radius: 20px;
+                margin: 20px;
+                font-size: -webkit-xxx-large;
+                
+/*                display: flex;
+                min-width: 120px;
+                min-height: 120px;
+                background-color: #c593de;
+                border-radius: 20px;
+                margin: 20px;
+                font-size: -webkit-xxx-large;*/
+            }
+            .selectionne {
+                background-color: purple;
+            }
+        </style> 
+    </head>
+    <body>
+        <div>
+            <div class="bloc" >
+                <button id="myBT" class="7" onClick="show(this)"></button>
+                <button class="0" onClick="show(this)" ></button>
+                <button class="6" onClick="show(this)"></button>
+            </div> 
+            <div class="bloc" >
+                <button class="1" onClick="show(this)"></button>
+                <button class="3" onClick="show(this)"></button>
+                <button class="4" onClick="show(this)"></button>
+            </div>
+            <div class="bloc" >
+                <button class="6" onClick="show(this)"></button>
+                <button class="7" onClick="show(this)"></button>
+                <button class="5" onClick="show(this)"></button>
+            </div> 
+
+        </div>
+        
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script>
+            function displayColor(i,elemDuDom){
+                if( i%2 == 0){
+                        $(elemDuDom).css('background-color','green');
+                }else
+                    $(elemDuDom).css('background-color','blue');
+            }
+            $('button').each(displayColor);
+        </script>
+    </body>
+</html>

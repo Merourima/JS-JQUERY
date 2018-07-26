@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <script>
+            function replaceAtindex(mot,i,lettre){
+                
+                var motAretourner = mot.substring(0,i) +lettre+ m.substring(i,mot.length);
+                return motAretourner;
+            }
+            function JeuMotus() {
+
+
+                var listMot = ["SALUT", "VIDER",  "TAPER", "ALLER"];
+                indice = Math.floor(Math.random() * listMot.length);
+                var motAleatoire = listMot[indice];
+                var l = motAleatoire[0];
+                var motADeniner = [l,"*","*","*","*"];
+                //SI LA TAILLE MOT N4EST PAS RECONNU / ==> var motADeniner =NEW aRRAYLIST()(motAleatoire.FILL("*").JOIN(""))
+                var i = 0;
+                var x = false;
+                //NBR ESSAI POUR JR --- while ((i < 5) && (motADeniner !== motchoisi))
+                while ((i < 5) && (x == false) ) {
+                    var motchoisi = prompt('Entrez un mot de 5 lettre\n' + motADeniner);
+                    //comparer chaque lettre du motchoisi[i] a listMot[indice]
+                    for (j = 0; j < 5; j++) { //motAleatoire.length =5
+                    
+                        if (motchoisi[j] === motAleatoire[j]){
+                            // return 'bravo';
+                            motADeniner[j] = motAleatoire[j];
+                            console.log(motADeniner);
+                        }  
+//                        if(motADeniner[j]=== "*"){
+//                             console.log('motADeniner == false');
+//                        }else{
+//                             x=true;
+//                             console.log("BRAVO");
+//                        }
+                    }
+                    alert("Résultat:",motADeniner );
+//                    for (j = 0; j < 5; j++) {
+//                        if(motADeniner[j]== "*"){
+//                             
+//                             console.log('motADeniner == false');
+//                         }
+//                        
+//                    }
+                    
+                    
+                    i++;
+                }
+            }
+            JeuMotus();
+        </script>
+    </body>
+</html>

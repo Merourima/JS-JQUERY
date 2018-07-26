@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .bloc{
+                width: 50%;
+                margin: 0 auto;
+                display: bloc;
+                margin-top: 30px;
+                border: 2px solid black;
+                border-shadow: 5px 10px red;
+                padding: 20px;
+            }
+            .bloc input {
+                display: inline-block;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bloc">
+            <form>
+                <span> Pseudo: </span>
+                <input type="text" name="pseudo"><br>
+                <span> Mot de passe: </span>
+                <input type="password" name="mdp1"><br>
+                <span> Confirmer le mot de passe: </span>
+                <input type="password" name="mdp2"><br>
+                <span> Email: </span>
+                <input type="email" name="mail"> <br>
+                <button> Valider </button>
+            </form>
+        </div>
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script>
+            
+            function valider(){
+             // if(($('input:mdp1').val()) == ($('input:mdp2').val())){
+                //var filter = /^[w-.+]+@[a-zA-Z0-9.-]+.[a-zA-z0-9]{2,4}$/;
+                //if((($(document.getElementsByName('mdp1')).val()) == ($(document.getElementsByName('mdp2')).val())) && (filter.test())){
+                 if( ($('[name=mdp1]').val() == $('[name=mdp2]').val())){  
+                     alert(" valide ");
+                }else{
+                    alert("Entrez deux mot de passe identique");
+                }
+                var email = $('[name=mail]').val();
+               if(!email.match("[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+")){
+                   alert("Email invalide");
+               }
+            }
+            $('button').click(valider);
+        </script>
+        
+    </body>
+</html>

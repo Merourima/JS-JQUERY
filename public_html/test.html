@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            .cartes {
+                display: block;
+                width: 783px;
+            }
+            .cartes button {
+                min-width: 120px;
+                min-height: 120px;
+                background-color: #c593de;
+                border-radius: 20px;
+                margin: 20px;
+                font-size: -webkit-xxx-large;
+            }
+            .selectionne {
+                background-color: purple;
+            }
+        </style> 
+
+    </head>
+    <body>
+
+        <div>
+            <div class="cartes" >
+                <button id="myBT" class="7" onClick="show(this)"></button>
+                <button class="0" onClick="show(this)" ></button>
+                <button class="6" onClick="show(this)"></button>
+                <button class="1" onClick="show(this)"></button>
+                <button class="3" onClick="show(this)"></button>
+                <button class="4" onClick="show(this)"></button>
+                <button class="1" onClick="show(this)"></button>
+
+                <button class="6" onClick="show(this)"></button>
+                <button class="7" onClick="show(this)"></button>
+                <button class="5" onClick="show(this)"></button>
+                <button class="0" onClick="show(this)" ></button>
+                <button class="2" onClick="show(this)"></button>
+
+                <button class="3" onClick="show(this)"></button>
+                <button class="4" onClick="show(this)"></button>
+                <button class="5" onClick="show(this)"></button>
+                <button class="2" onClick="show(this)"></button>
+
+            </div>
+        </div>
+        <script>
+            var carteVisible1 = null;
+            var carteVisible2 = null;
+            function show(tag) {
+                var score = 0;
+                // Détermine le contexte des cartes
+                if (carteVisible1 == null) {// Aucune n'était visible
+                    // Retourne carte 1 et la mémorise
+                    carteVisible1 = tag;
+                    tag.innerHTML = tag.className;
+                } else if (carteVisible2 == null) {// La 1ère carte était visible
+                    // Retourne carte 2 et la mémorise
+                    carteVisible2 = tag;
+                    tag.innerHTML = tag.className;
+                } else {// Les 2 cartes étaient visible
+                    if (carteVisible1.className == carteVisible2.className) {
+//                        carteVisible1.disabled = true;
+//                        carteVisible2.disabled = true;
+                          carteVisible1.style.visibility = "hidden";
+                          carteVisible2.style.visibility = "hidden";
+                          score = score+1;
+                          
+                          alert(score);
+                    } else {
+                        carteVisible1.innerHTML = '';
+                        carteVisible2.innerHTML = '';
+                    }
+
+                    carteVisible1 = null;
+                    carteVisible2 = null;
+                }
+            }
+        </script>               
+    </body>
+</html>

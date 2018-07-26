@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 juil. 2018, 16:18:56
+    Author     : Administrateur
+*/
+
+.grille{
+   /*//display:flex;*/
+   display: grid;
+  /*// flex-flow:row;  Affichage horizontal du contenu */
+   justify-content:space-between; /* Espace entre chaque photo */
+   align-items:center; /* Centrer verticalement dans le conteneur */
+   min-height:auto; /* Ajustement automatique de la hauteur du conteneur */
+   border-radius:10px;
+   padding:20px;
+   box-sizing:border-box;
+   margin-bottom:30px;
+   background-color:antiquewhite;
+} 
+

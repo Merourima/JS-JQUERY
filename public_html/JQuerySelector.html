@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #tableau{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+         <h1> Hello </h1>
+         <button class="btn1"> Hide </button> 
+        <button class="btn2"> Show </button> 
+        <table id="tableau">
+            <thead>
+            <th>Pays</th>
+            <th>Capitale</th>
+            <th>Langue</th>
+        </thead>
+        <tbody>
+            <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+        
+        <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+            <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+            <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+            <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+            <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+            <tr class="ligne-donne">
+                <td>  France   </td>    
+                <td>  Paris   </td>  
+                <td>  Français   </td> 
+            </tr>
+            <tr class="ligne-donne">
+                <td>  Espagne</td>           
+                <td>  Madrid</td>
+                <td>  Espagnol</td>
+            </tr>
+            </tbody>
+    </table>
+       
+        
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script>
+        function clickSurelem(e){
+            console.log(e.target);
+        }
+        $('td').click(clickSurelem);
+        
+        function hidenOnclick(){
+            $(document.getElementsByTagName("h1")).hide();
+            $(document.getElementsByTagName("p")).show();
+        }
+            $('.btn1').click(hidenOnclick);
+            
+        function showOnclick(){
+           
+            $(document.getElementsByTagName("h1")).show();
+        }
+            $('.btn2').click(showOnclick);    
+            //$("p").hide(hidenOnclick);
+    </script>
+</body>
+</html>

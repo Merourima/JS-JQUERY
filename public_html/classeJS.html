@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            class ORDINATEUR {
+                constructor(nbrProc, memoirEnGo, disqudur) {
+                    this.nbrProc = nbrProc;
+                    this.memoirEnGo = memoirEnGo;
+                    this.disqudur = disqudur;
+                }
+                affiche() {
+                    // alert(" ********************Ordinateur*************** ");
+                    alert("Processeur: " + this.nbrProc + "Memoire: " + this.memoirEnGo + "Disque Dure: " + this.disqudur);
+                }
+            }
+            class  PC extends ORDINATEUR {
+                constructor() {
+                    super();
+                    this.nbProcesseur = 1;
+                }
+                affiche() {
+                    super.affiche();
+                    alert(" ********************PC*************** ");
+                }
+            }
+            class MAC extends  ORDINATEUR {
+
+//                affiche() {
+//                    alert(" ********************MAC*************** ");
+//                }
+            }
+            class MacBookPro extends MAC {
+                constructor() {
+                    super(4, 16, 1);
+                }
+            }
+
+        </script>
+    </body>
+</html>

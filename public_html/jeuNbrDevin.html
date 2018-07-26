@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <script>
+            function NbrDevine (){
+                
+             //   var nbrHasard = Math.floor(Math.random() * Math.floor(100+1));
+                var nbrHasard = Math.floor((100)*Math.random()+1); 
+                
+                do{
+                    
+                    var nbrChoisi = prompt(" entrez un Nombre entre 1 et 100");
+                        if(nbrHasard == nbrChoisi){
+                            //return true;
+                            alert(" Bravo ");
+                        }else if (nbrHasard < nbrChoisi){
+                            alert(" entrez un nombre inferieur à :" +nbrChoisi);
+                        }else{
+                            alert("entrez un nombre supérieur à :" +nbrChoisi);
+                        }
+                    
+                }while(nbrHasard != nbrChoisi);
+                
+            }
+            NbrDevine ();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            .joueurs, .ingredients{
+                display: flex;
+            }
+            .joueur, .ingredient{
+                min-width: 150px;
+                min-height: 200px;
+                background-color: #c593de;
+                border-radius: 20px;
+                margin: 20px;
+            }
+            .selectionne {
+                background-color: purple;
+            }
+        </style> 
+    </head>
+    <body>
+        <div class="joueurs">
+            <div id="premierJoueur" class="joueur" onclick="changerClasse(this);"></div>
+            <div class="joueur" onclick="changerClasse(this);"></div>
+            <div class="joueur" onclick="changerClasse(this);"></div>
+        </div>
+        <div class="ingredients">
+            <div class="ingredient" onclick="changerClasse(this);"></div>
+            <div class="ingredient" onclick="changerClasse(this);"></div>
+            <div class="ingredient" onclick="changerClasse(this);"></div>
+            <div class="ingredient" onclick="changerClasse(this);"></div>
+        </div>
+        <script>
+           // NbrDevine();
+           
+           function affiche(txt){
+               console.log(new Date() + "" + txt);
+           }
+           
+           function changerClasse(tag){
+               
+               //console.log(tag);
+               //****** solution avec le style
+//               if ( tag.getAttribute("style") === "background-color: #c593de"  ){
+//                   tag.setAttribute("style","background-color: purple");
+//               }else{
+//                   tag.setAttribute("style","background-color: #c593de");
+//               }
+//               
+               //****** solution avec les classes 
+//               if( tag.classList.contains("selectionne")){
+//                   tag.classList.remove("selectionne");
+//               }else{   
+//                   tag.classList.add("selectionne");
+//               }
+               
+               //************2eme solution
+               tag.classList.toggle("selectionne");
+           }
+           
+           
+        </script>
+    </body>
+</html>

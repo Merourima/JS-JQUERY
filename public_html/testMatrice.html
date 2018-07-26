@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styleJeuMemoire.css" type="text/css" rel="stylesheet">
+    
+    </head>
+    <body>
+        
+<!--        <div>
+            <div >
+                <div >A</div>
+                <div >B</div>
+                <div >C</div>
+                <div >D</div>
+                <div >A</div>
+                <div >B</div>
+                <div >C</div>
+                <div >D</div>
+                <div >A</div>
+                <div >B</div>
+                <div >C</div>
+                <div >D</div>
+                <div >A</div>
+                <div >B</div>
+                <div >C</div>
+                <div >D</div>
+            </div>
+        </div>-->
+        <script>
+            function JeuMemoire(){
+                var tailledeGrille = prompt("Entrez la taille de la grille"); //(if faut un nbr pair)
+                //declarere un div avec un id la partie html
+                //var html = ""; vide et la remplir dans la boucle
+                
+                //generer un tableau aléatoire
+                for( i=0; i<tailledeGrille; i++ ) {
+                    
+                    //les ligne:  html = " boutton ou div ou se que tu veux avec la class par exemple onclick"
+                    // html += "<div class=""ligne>"; la div ouvrante
+                    
+                    
+                    for(j=0; j<tailledeGrille; j++){
+                        
+                        //les colones:  html = " boutton ou div ou se que tu veux avec la class par exemple onclick"
+                        // html += "<div class="cellule" onclick=>"; la div fervrante
+                        
+                        
+                        
+                        
+                        
+//                        maDiv = document.createElement("div");
+//                        maDiv.id = 'id_de_la_div';
+//                        maDiv.style.border = '1px solid black'; //Pour mettre un border à ta div, par exemple
+//                        maDiv.style = 
+//                        maDiv.innerHTML = '15'; //Peut contenir de l'html
+//                        maDiv.onclick = function(){alert('click !');}; //Évènement ayant lieu lors du click sur la div
+//                        document.body.appendChild(maDiv);
+                        
+                    }
+                    //html+= "</div>";
+                }
+                // au finale: en n'appel notre la div ou se qu'on n'a met 
+//                documment.getElementById("id de notre truque de html").innerHTML = html;
+            }
+            
+        </script>
+
+    </body>
+</html>
+

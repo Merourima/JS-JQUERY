@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            //tab [1,2,3,4];
+            var filtreMoi = function (n) {
+                //return n%2 == 0;
+                if (n == 2) {
+                    return true;
+                } else {
+                    for (var i = 2; i < n; i++) {
+                        if ((n % i) == 0) {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            }
+            var pasGaCoupDeux = function (x) {
+                var pprdue = ["belg","alg","djibouti","france"];
+                for (var i in pprdue) {
+                    if (pprdue[i] === x.tolowerCase())
+                        return false;
+                }
+                return true;
+            }
+            //***************correction
+            function pasGaCoup(pays) {
+
+
+                return (pays !== 'Belgique' &&
+                        pays !== 'Senegal' &&
+                        pays !== 'Djibuti' &&
+                        pays !== 'Vatican');
+            }
+
+
+            //***********************
+            var expr = 'Papayas';
+            switch (expr) {
+                case 'Oranges':
+                    console.log('Oranges are $0.59 a pound.');
+                    break;
+                case 'Mangoes':
+                case 'Papayas':
+                    console.log('Mangoes and papayas are $2.79 a pound.');
+                    // expected output: "Mangoes and papayas are $2.79 a pound."
+                    break;
+                default:
+                    console.log('Sorry, we are out of ' + expr + '.');
+            }
+
+//*****************************
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .tableau-donnees{
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tableau-donnees">
+            <table class="" >
+                <thead>
+                <th> ID</th>
+                <th> Name</th>
+                <th> Mass</th>
+                <th> Recclass</th>
+                <th> Year</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+       
+        <script>
+                
+               
+                function callback(tab){
+                     var tabContent = '';
+                     for(var i in tab){ 
+                        var meteorite = tab[i];
+                        tabContent += '<tr>';
+                        tabContent += '<td>' + meteorite.id+ '</td>';
+                        tabContent += '<td>' + meteorite.name+ '</td>';
+                        tabContent += '<td>' + meteorite.mass+ '</td>';
+                        tabContent += '<td>' + meteorite.recclass+ '</td>';
+                        tabContent += '<td>' + meteorite.year+ '</td>';
+                        tabContent += '</tr>';
+                     }
+                        $('tbody').html(tabContent);
+                        // $('td:nth-of-type(5n)').html('***');
+                        $('td:nth-of-type(5n)').each(formaDate);
+                        $('td').each(replaceUndefined);
+                }
+                
+                function replaceUndefined(indice,elemDuDom){
+                  if( $(elemDuDom).html()== "undefined" || $(elemDuDom).html()== "Unknown"){
+                      $(elemDuDom).html("INCONNUE");
+                  }
+                }
+              
+                function formaDate( indice,elemDuDom){
+                  var objetJquery= $(elemDuDom);
+                  objetJquery.html(objetJquery.html().substring(0,10));
+                }
+              
+                $.getJSON("JSON/Meteorite.json", callback);
+                
+        </script>
+    </body>
+</html>
